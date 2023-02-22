@@ -15,6 +15,23 @@ class ProjectSeeder extends Seeder
      */
     public function run()
     {
+
+        DB::table('tb_m_client')->insert([
+            'client_name' => 'NEC',
+            'client_address' => 'Jakarta'
+        ]);
+
+        DB::table('tb_m_client')->insert([
+            'client_name' => 'TAM',
+            'client_address' => 'Jakarta'
+        ]);
+
+        DB::table('tb_m_client')->insert([
+            'client_name' => 'TUA',
+            'client_address' => 'Bandung'
+        ]);
+
+        
         DB::table('tb_m_project')->insert([
             'project_name' => 'WMS',
             'client_id' => '1',
@@ -45,22 +62,6 @@ class ProjectSeeder extends Seeder
             'project_start' => '2022-05-01',
             'project_end' => '2022-08-31',
             'project_status' => 'DOING'
-        ]);
-
-
-        DB::table('tb_m_client')->insert([
-            'client_name' => 'NEC',
-            'client_address' => 'Jakarta'
-        ]);
-
-        DB::table('tb_m_client')->insert([
-            'client_name' => 'TAM',
-            'client_address' => 'Jakarta'
-        ]);
-
-        DB::table('tb_m_client')->insert([
-            'client_name' => 'TUA',
-            'client_address' => 'Bandung'
         ]);
     }
 }
